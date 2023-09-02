@@ -4,15 +4,23 @@ namespace MiniStore.SharedKernel
 {
     public abstract class Entity
     {
-        private List<IDomainEvent>? domainEvents;
+        private List<IDomainEvent>? _domainEvents;
 
-        public IEnumerable<IDomainEvent> DomainEvents => domainEvents == null ? Enumerable.Empty<IDomainEvent>() : domainEvents.AsReadOnly();
+        public IEnumerable<IDomainEvent> DomainEvents =>
+            _domainEvents == null ? Enumerable.Empty<IDomainEvent>() : _domainEvents.AsReadOnly();
         
         protected void RegisterDomainEvent(IDomainEvent domainEvent)
         {
+            _domainEvents = _domainEvents ?? new List<IDomainEvent>();
+            _domainEvents.Add(domainEvent);
+        }
 
-            domainEvents = domainEvents ?? new List<IDomainEvent>();
-            this.domainEvents.Add(domainEvent);
+        protected static void CheckRule(IBusinessRule rule)
+        {
+            if (rule.IsBroken())
+            {
+                throw new BusinessRuleValidationException(rule);
+            }
         }
     }
 }
