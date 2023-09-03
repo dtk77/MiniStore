@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniStore.Domain", "MiniStore.Domain\MiniStore.Domain.csproj", "{C285B297-F58A-4A5E-A363-FD0131AE0949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniStore.Domain", "MiniStore.Domain\MiniStore.Domain.csproj", "{C285B297-F58A-4A5E-A363-FD0131AE0949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniStore.SharedKernel", "MiniStore.SharedKernel\MiniStore.SharedKernel.csproj", "{16A29857-395F-4222-BB5F-861DD2E162C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniStore.SharedKernel", "MiniStore.SharedKernel\MiniStore.SharedKernel.csproj", "{16A29857-395F-4222-BB5F-861DD2E162C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{78CF5BF3-A70E-4E07-ABDD-E56A4D05301C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniStore.UnitTests", "Tests\MiniStore.UnitTests\MiniStore.UnitTests.csproj", "{725B7230-7F44-42C2-B1ED-DE19B844FFEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,16 @@ Global
 		{16A29857-395F-4222-BB5F-861DD2E162C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16A29857-395F-4222-BB5F-861DD2E162C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16A29857-395F-4222-BB5F-861DD2E162C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725B7230-7F44-42C2-B1ED-DE19B844FFEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725B7230-7F44-42C2-B1ED-DE19B844FFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725B7230-7F44-42C2-B1ED-DE19B844FFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725B7230-7F44-42C2-B1ED-DE19B844FFEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{725B7230-7F44-42C2-B1ED-DE19B844FFEB} = {78CF5BF3-A70E-4E07-ABDD-E56A4D05301C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {778D744E-3E54-4A4B-95AE-B21F6629A1E7}
