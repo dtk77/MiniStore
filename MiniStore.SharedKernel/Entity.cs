@@ -15,6 +15,8 @@ namespace MiniStore.SharedKernel
             _domainEvents.Add(domainEvent);
         }
 
+        public void ClearDomainEvents() => _domainEvents?.Clear();
+
         protected static void CheckRule(IBusinessRule rule)
         {
             if (rule.IsBroken())
