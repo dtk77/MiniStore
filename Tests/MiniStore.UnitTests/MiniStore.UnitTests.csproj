@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\MiniStore.Application\MiniStore.Application.csproj" />
     <ProjectReference Include="..\..\MiniStore.SharedKernel\MiniStore.SharedKernel.csproj" />
   </ItemGroup>
 
